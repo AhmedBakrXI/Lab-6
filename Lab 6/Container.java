@@ -1,8 +1,10 @@
 public class Container implements Comparable<Container> {
-    String containerID;
-    String shortName;
-    String longName;
+    // Declaring data fields to assign container attributes to it
+    private String containerID;
+    private String shortName;
+    private String longName;
 
+    // Mutators
     public String getContainerID() {
         return containerID;
     }
@@ -27,6 +29,7 @@ public class Container implements Comparable<Container> {
         this.longName = longName;
     }
 
+    // Override toString method to print the container
     @Override
     public String toString() {
         return  "      <CONTAINER "+ containerID + "\n" +
@@ -35,7 +38,7 @@ public class Container implements Comparable<Container> {
                 "      </CONTAINER>\n";
     }
 
-
+    // Override compareTo method to use sort method
     @Override
     public int compareTo(Container o) {
         if (this.getShortName().charAt(9) > o.getShortName().charAt(9)){
